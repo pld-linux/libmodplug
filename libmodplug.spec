@@ -32,7 +32,7 @@ zdecydowanie przewy¿sza Winampa.
 Summary:	Header files for libmodplug library
 Summary(pl):	Pliki nag³ówkowe biblioteki libmodplug
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
 
 %description devel
@@ -45,7 +45,7 @@ Pliki nag³ówkowe biblioteki libmodplug.
 Summary:	Static libmodplug library
 Summary(pl):	Statyczna biblioteka libmodplug
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libmodplug library.
