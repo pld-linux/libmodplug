@@ -1,5 +1,5 @@
 Summary:	The ModPlug mod file playing library
-Summary(pl):	ModPlug - biblioteka do odtwarzania plików mod
+Summary(pl.UTF-8):   ModPlug - biblioteka do odtwarzania plikÃ³w mod
 Name:		libmodplug
 Version:	0.8.4
 Release:	1
@@ -21,16 +21,16 @@ DBM, DMF, DSM, FAR, MDL, MED, MTM, OKT, PTM, STM, ULT, UMX, MT2, PSM.
 Sound quality is slightly better than Mikmod and vastly superior over
 Winamp.
 
-%description -l pl
-Modplug to biblioteka do odtwarzania plików mod. Potrafi odtwarzaæ 22
-ró¿ne formaty mod, w tym: MOD, S3M, XM, IT, 669, AMF (obie wersje),
+%description -l pl.UTF-8
+Modplug to biblioteka do odtwarzania plikÃ³w mod. Potrafi odtwarzaÄ‡ 22
+rÃ³Å¼ne formaty mod, w tym: MOD, S3M, XM, IT, 669, AMF (obie wersje),
 AMS, DBM, DMF, DSM, FAR, MDL, MED, MTM, OKT, PTM, STM, ULT, UMX, MT2,
-PSM. Jako¶æ d¼wiêku jest nieco lepsza ni¿ w przypadku Mikmoda i
-zdecydowanie przewy¿sza Winampa.
+PSM. JakoÅ›Ä‡ dÅºwiÄ™ku jest nieco lepsza niÅ¼ w przypadku Mikmoda i
+zdecydowanie przewyÅ¼sza Winampa.
 
 %package devel
 Summary:	Header files for libmodplug library
-Summary(pl):	Pliki nag³ówkowe biblioteki libmodplug
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libmodplug
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -38,19 +38,19 @@ Requires:	libstdc++-devel
 %description devel
 Header files for libmodplug library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libmodplug.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libmodplug.
 
 %package static
 Summary:	Static libmodplug library
-Summary(pl):	Statyczna biblioteka libmodplug
+Summary(pl.UTF-8):   Statyczna biblioteka libmodplug
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libmodplug library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libmodplug.
 
 %prep
