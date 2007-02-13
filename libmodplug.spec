@@ -1,5 +1,5 @@
 Summary:	The ModPlug mod file playing library
-Summary(pl.UTF-8):   ModPlug - biblioteka do odtwarzania plików mod
+Summary(pl.UTF-8):	ModPlug - biblioteka do odtwarzania plików mod
 Name:		libmodplug
 Version:	0.8.4
 Release:	1
@@ -30,7 +30,7 @@ zdecydowanie przewyższa Winampa.
 
 %package devel
 Summary:	Header files for libmodplug library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libmodplug
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libmodplug
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -43,7 +43,7 @@ Pliki nagłówkowe biblioteki libmodplug.
 
 %package static
 Summary:	Static libmodplug library
-Summary(pl.UTF-8):   Statyczna biblioteka libmodplug
+Summary(pl.UTF-8):	Statyczna biblioteka libmodplug
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
