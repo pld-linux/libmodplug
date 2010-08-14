@@ -1,17 +1,17 @@
 Summary:	The ModPlug mod file playing library
 Summary(pl.UTF-8):	ModPlug - biblioteka do odtwarzania plików mod
 Name:		libmodplug
-Version:	0.8.7
+Version:	0.8.8.1
 Release:	1
 License:	Public Domain
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/modplug-xmms/%{name}-%{version}.tar.gz
-# Source0-md5:	d2d9ccd8da22412999caed076140f786
+Source0:	http://downloads.sourceforge.net/modplug-xmms/%{name}-%{version}.tar.gz
+# Source0-md5:	f7fa53a60c650024ff51cca88341776b
 URL:		http://modplug-xmms.sourceforge.net/
-BuildRequires:	autoconf >= 2.60
+BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
-BuildRequires:	libtool >= 2:1.4d
+BuildRequires:	libtool >= 2:2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,7 +57,6 @@ Statyczna biblioteka libmodplug.
 %setup -q
 
 %build
-# supplied libtool doesn't support C++ libraries
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -81,16 +80,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog README TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%doc AUTHORS COPYING ChangeLog NEWS README TODO
+%attr(755,root,root) %{_libdir}/libmodplug.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libmodplug.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libmodplug.so
+%{_libdir}/libmodplug.la
 %{_includedir}/libmodplug
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/libmodplug.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libmodplug.a
