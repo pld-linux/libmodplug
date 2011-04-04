@@ -1,15 +1,15 @@
 Summary:	The ModPlug mod file playing library
 Summary(pl.UTF-8):	ModPlug - biblioteka do odtwarzania plików mod
 Name:		libmodplug
-Version:	0.8.8.1
+Version:	0.8.8.2
 Release:	1
 License:	Public Domain
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/modplug-xmms/%{name}-%{version}.tar.gz
-# Source0-md5:	f7fa53a60c650024ff51cca88341776b
+# Source0-md5:	e1fceac4c3bc26ebe96f619b46d26ff7
 URL:		http://modplug-xmms.sourceforge.net/
 BuildRequires:	autoconf >= 2.63
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -63,6 +63,7 @@ Statyczna biblioteka libmodplug.
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	--enable-static
 %{__make}
 
