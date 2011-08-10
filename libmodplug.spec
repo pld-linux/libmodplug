@@ -1,12 +1,12 @@
 Summary:	The ModPlug mod file playing library
 Summary(pl.UTF-8):	ModPlug - biblioteka do odtwarzania plików mod
 Name:		libmodplug
-Version:	0.8.8.3
+Version:	0.8.8.4
 Release:	1
 License:	Public Domain
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/modplug-xmms/%{name}-%{version}.tar.gz
-# Source0-md5:	8a9c713f0f56894163ddc61f9a0d1f71
+# Source0-md5:	fddc3c704c5489de2a3cf0fedfec59db
 URL:		http://modplug-xmms.sourceforge.net/
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
