@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static libraries
+
 Summary:	The ModPlug mod file playing library
 Summary(pl.UTF-8):	ModPlug - biblioteka do odtwarzania plików mod
 Name:		libmodplug
@@ -12,6 +16,7 @@ BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:2.0
+BuildRequires:	rpmbuild(macros) >= 1.527
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -64,7 +69,7 @@ Statyczna biblioteka libmodplug.
 %{__automake}
 %configure \
 	--disable-silent-rules \
-	--enable-static
+	%{__enable_disable static_libs static}
 %{__make}
 
 %install
@@ -92,6 +97,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/libmodplug
 %{_pkgconfigdir}/libmodplug.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libmodplug.a
+%endif
