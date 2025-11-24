@@ -12,10 +12,7 @@ Group:		Libraries
 Source0:	http://downloads.sourceforge.net/modplug-xmms/%{name}-%{version}.tar.gz
 # Source0-md5:	5ba16981e6515975e9a68a58d5ba69d1
 URL:		http://modplug-xmms.sourceforge.net/
-BuildRequires:	autoconf >= 2.63
-BuildRequires:	automake >= 1:1.11
 BuildRequires:	libstdc++-devel
-BuildRequires:	libtool >= 2:2.0
 BuildRequires:	rpmbuild(macros) >= 1.527
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -62,11 +59,6 @@ Statyczna biblioteka libmodplug.
 %setup -q
 
 %build
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure \
 	--disable-silent-rules \
 	%{__enable_disable static_libs static}
